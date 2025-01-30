@@ -3,15 +3,58 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Welcome to TruBlu9</title>
+  <title>TruBlu9</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(to right, #00c6ff, #0072ff);
+      color: white;
+      text-align: center;
+      padding-top: 50px;
+      transition: background 0.5s ease-in-out;
+    }
+
+    h1 {
+      font-size: 3em;
+    }
+
+    p {
+      font-size: 1.5em;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 1em;
+      background-color: #00c6ff;
+      border: none;
+      border-radius: 5px;
+      color: white;
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+
+    button:hover {
+      transform: scale(1.1);
+    }
+  </style>
 </head>
 <body>
-  <header>
-    <h1>Welcome to TruBlu9</h1>
-    <p>Empowering Creativity and Innovation</p>
-  </header>
-  <section>
-    <p>Discover the future of AI and creativity with TruBlu9. Join the movement!</p>
-  </section>
+  <h1>Welcome to TruBlu9</h1>
+  <p>Click the button below to change the vibe!</p>
+  <button onclick="changeVibe()">Change Vibe</button>
+
+  <script>
+    function changeVibe() {
+      const body = document.body;
+      const vibes = [
+        "linear-gradient(to right, #ff7e5f, #feb47b)",
+        "linear-gradient(to right, #00c6ff, #0072ff)",
+        "linear-gradient(to right, #00ff00, #00cc99)",
+        "linear-gradient(to right, #ff00ff, #ff0000)"
+      ];
+      const randomVibe = vibes[Math.floor(Math.random() * vibes.length)];
+      body.style.background = randomVibe;
+    }
+  </script>
 </body>
 </html>
